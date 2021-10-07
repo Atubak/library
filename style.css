@@ -1,20 +1,49 @@
 body {
-    background-color: hsl(226, 50%, 68%);
+    background-color: hsl(49, 100%, 17%);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+
 
 .bookSection {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 }
 
-.book {    
-    background-color: hsl(58, 81%, 86%);
-    border-style: solid;
+.book, .newBook, .newBookForm {    
+    background-color: hsla(49, 100%, 49%, 0.877);
+    border-style:solid;
     border-radius: 6px;
-    box-shadow: 5px 5px 3px grey;
     height: 300px;
-    width: 150px;
-    color: hsl(226, 50%, 20%);
+    width: 185px;
+    color: hsl(0, 0%, 0%);
     padding: 40px;
 }
+
+.book, .newBook {
+    text-align: center;
+}
+
+/* Button to add new books */
+.newBook {
+    cursor: pointer;
+    user-select: none;
+}
+
+.newBook:hover {
+    background-color: hsla(49, 100%, 39%, 0.877);
+}
+
+.newBook:active {
+    transform: translateY(3px);
+}
+
+
+/* Form to add the info of the new books */
+
+.newBookForm input {
+    margin-bottom: 10px;
+}
+
