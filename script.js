@@ -8,20 +8,38 @@ let divRead;
 
 
 
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.info = function() {
-        return `${title} by ${author} with a length of ${pages} pages.`
-    };
-    this.toggleRead = function() {
+// function Book(title, author, pages, read) {
+//     this.title = title
+//     this.author = author
+//     this.pages = pages
+//     this.read = read
+//     this.info = function() {
+//         return `${title} by ${author} with a length of ${pages} pages.`
+//     };
+//     this.toggleRead = function() {
+//         if (this.read === 'Read') return this.read = 'Not Read Yet';
+//         if (this.read === 'Not Read Yet') return this.read = 'Read';
+//     };
+// };
+
+class Book {
+    
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info = () => {
+        return `${this.title} by ${this.author} with a length of ${this.pages} pages`
+    }
+
+    toggleRead = () => {
         if (this.read === 'Read') return this.read = 'Not Read Yet';
         if (this.read === 'Not Read Yet') return this.read = 'Read';
-    };
+    }
 };
-
 
 
 // call to add a book to the myLibrary array
